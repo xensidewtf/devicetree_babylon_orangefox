@@ -9,5 +9,8 @@ include $(CLEAR_VARS)
         mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/vendor; \
         cp -rf $(LOCAL_PATH)/$(PRODUCT_RELEASE_NAME)/vendor $(TARGET_RECOVERY_ROOT_OUT)/; \
         echo "calling depmod on miui_prebuilt"; \
-        $(DEPMOD) -b $(TARGET_RECOVERY_ROOT_OUT)/vendor 1.1;
+        $(DEPMOD) -b $(TARGET_RECOVERY_ROOT_OUT)/vendor 1.1; \
+        echo "installing touch firmware to kernel firmware search path (/lib/firmware)"; \
+        mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/lib/firmware; \
+        cp -rf $(LOCAL_PATH)/$(PRODUCT_RELEASE_NAME)/vendor/firmware/. $(TARGET_RECOVERY_ROOT_OUT)/lib/firmware/;
 include $(BUILD_PHONY_PACKAGE)

@@ -108,6 +108,7 @@ metis.ko
 zram.ko
 zsmalloc.ko
 mi_power.ko
+mist.ko
 qrng_dlkm.ko
 bootinfo.ko
 debug_ext.ko

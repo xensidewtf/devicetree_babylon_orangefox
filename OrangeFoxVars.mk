@@ -1,0 +1,43 @@
+# OrangeFox Recovery configuration for Xiaomi MIX Fold 3 (babylon)
+# Target: Android 16 / HyperOS 3
+
+# Version / Maintainer
+FOX_BUILD_TYPE := Unofficial
+OF_MAINTAINER := xensidewtf
+
+# Display / Screen
+OF_SCREEN_H := 2504
+OF_STATUS_H := 100
+OF_STATUS_INDENT_LEFT := 48
+OF_STATUS_INDENT_RIGHT := 48
+OF_ALLOW_DISABLE_NAVBAR := 0
+
+# Functionality
+FOX_USE_BASH_SHELL := 1
+FOX_ASH_IS_BASH := 1
+FOX_USE_NANO_EDITOR := 1
+FOX_USE_TAR_BINARY := 1
+FOX_USE_SED_BINARY := 1
+FOX_USE_XZ_UTILS := 1
+FOX_USE_LZ4_BINARY := 1
+OF_USE_MAGISKBOOT := 1
+OF_USE_MAGISKBOOT_FOR_ALL_PATCHES := 1
+
+# Partitions / A-B
+FOX_VIRTUAL_AB_DEVICE := 1
+FOX_AB_DEVICE := 1
+
+# Remove TWRP app from recovery
+FOX_DELETE_AROMAFM := 1
+FOX_BUGGED_AOSP_ARB_WORKAROUND := "2099-12-31"
+
+# Security patch level for decryption (Android 16 / HyperOS 3)
+OF_KEEP_DM_VERITY_FORCED_ENCRYPTION := 1
+FOX_VARIANT := A16_HOS3
+
+# Advanced
+OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
+OF_USE_TWRP_SAR_DETECT := 1
+OF_DISABLE_MIUI_OTA_BY_DEFAULT := 1
+FOX_REPLACE_BUSYBOX_PS := 1
+OF_QUICK_BACKUP_LIST := /boot;/data;
